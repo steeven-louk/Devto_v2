@@ -9,7 +9,8 @@
         font-size: 110%;
         text-transform: capitalize;
         padding: .5rem;
-        border: .5rem;
+        border-radius: .3rem;
+        width: 80%;
         cursor: pointer;
 
         &:hover{
@@ -46,7 +47,7 @@
             cursor: pointer;
 
             &:hover{
-                background: #ccc;
+                background: rgb(156, 154, 154);
             }
         }
     }

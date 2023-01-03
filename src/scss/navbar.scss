@@ -1,0 +1,88 @@
+nav {
+    background: #fff;
+    max-width: 100%;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem 3rem;
+
+        .left_nav{
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            .navbar_brand{
+                max-width: 3.5rem;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .search_container{
+                max-width: 100%;
+
+                .search{
+                    width: 170%;
+                    padding: .7rem;
+                    border-radius: 3px;
+                    border: 1px solid #ccc;
+                    outline: none;
+                }
+            }
+        }
+
+        .right_nav{
+            float: right;
+           
+            ul{
+                display: flex;
+                gap: 1.2rem;
+                align-items: baseline;
+
+                &:nth-child(1){
+                    button{
+                        padding: .7rem;
+                        background: rgb(79, 79, 236);
+                        color: #fff;
+                        border-radius: .3rem;
+                        border: none;
+                        cursor: pointer;
+                        transition: background .4s;
+
+                        &:hover{
+                            background: blue;
+                            
+                        }
+                    }
+                }
+
+               .icon_container{
+                padding: .7em;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background .4s;
+
+                &:hover{
+                    background: #ccc;
+                }
+               }
+
+                &:last-child{
+                    align-items: center;
+
+                    .user{
+                        max-width: 3rem;
+                        border-radius: 50%;
+
+                        img{
+                            width: 100%;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

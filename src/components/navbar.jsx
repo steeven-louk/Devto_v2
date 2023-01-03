@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className='navbar'>
         <div className="container">
             <div className="left_nav">
                 <div className="navbar_brand">

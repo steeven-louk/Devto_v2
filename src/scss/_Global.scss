@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 body{
@@ -50,6 +50,9 @@ li{
         display: none;
     }
     
+    .subMenu_icon .sub_ico{
+        display: block!important;
+    }
 
     .leftside_container{
         display: none!important;
@@ -65,10 +68,7 @@ li{
 }
 
 @media screen and (max-width: 425px) {
-   *{
-    box-sizing: content-box;
-   }
-
+ 
    .main__container, .content{
     padding: 0;
 }
@@ -77,9 +77,13 @@ li{
     padding: 0px .5em!important;
 }    
 
-.navbar .container{
+.navbar{
+    box-sizing: initial;
+    margin-bottom: 25px;
+    .container{
         padding: .5rem 1rem!important;
     }
+}
 
     .card{
         padding: 10px!important;

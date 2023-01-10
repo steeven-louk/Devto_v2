@@ -55,7 +55,7 @@ const CardComponent = (props) => {
               <span className="time">
                 {articles.reading_time_minutes} min read
               </span>
-              <button>save</button>
+              <button><FontAwesomeIcon icon="fa-regular fa-bookmark" /></button>
             </div>
           </div>
         </div>

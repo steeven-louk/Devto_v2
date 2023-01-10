@@ -8,9 +8,16 @@
 
         
         .left_nav{
+            position: relative;
             display: flex;
             align-items: center;
             gap: 1.5rem;
+
+            .subMenu_icon .sub_ico{
+                display: none;
+                width: 35px;
+                height: 35px;
+            }
 
             .navbar_brand{
                 max-width: 3.5rem;
@@ -30,6 +37,53 @@
                     border: 1px solid #ccc;
                     outline: none;
                 }
+            }
+
+            .subMenu{
+                position: fixed;
+                margin: 0;
+                top: 0;
+                left: 0;
+                width: 250px;
+                height: 100vh;
+                background: #fff;
+                padding: 15px;
+                overflow-y: scroll;
+                transform: translateX(-290px);
+                transition: .4s all ease-in-out;
+
+                .subHeader{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #ccc;
+                }
+
+                nav {
+                    margin-top: 25px;
+
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5em;
+
+                        .subMenu_social{
+                            display: flex;
+                            gap: 25px;
+
+                             .social-icon{
+                                width: 20px;
+                                height: 20px;
+                                color: rgb(116, 113, 113);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .subMenu.open{
+                transform: translateX(0);
             }
         }
 

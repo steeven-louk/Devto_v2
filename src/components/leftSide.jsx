@@ -40,7 +40,7 @@ const LeftSide = () => {
           <li># sql</li>
           <li># ubuntu</li>
           <li># aws</li>
-          <li># python _</li>
+          <li># python</li>
         </ul>
       </div>
     </div>

@@ -5,16 +5,19 @@ import axios from 'axios'
 const Content = () => {
 
   const [getArticle, setGetArticles] = useState()
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const getData = async () =>{
     setLoading(true)
      await axios.get('https://dev.to/api/articles').then((res)=>{
       
      if(res.status === 200){
-        setGetArticles(res.data);
-        setLoading(false);
+        setTimeout(() => {
 
+           setGetArticles(res.data);
+        setLoading(false);
+        }, 3000);
+       
      }
     })
     .catch((err)=> console.error(err));
@@ -23,10 +26,7 @@ const Content = () => {
 // console.log(getArticle);
 
   useEffect(() => {
-    setTimeout(() => {
        getData();
-    }, 3000);
-  
   }, []);
 
 
@@ -43,8 +43,10 @@ const Content = () => {
       <div className="post_container">
 
       {getArticle?.map((item)=>(
+        
           <CardComponent articles={item} loading={loading} key={item.id}/>
-      ))}
+    
+      ))} 
       </div>
     </div>
   )

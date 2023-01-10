@@ -2,10 +2,10 @@
     background: #fff;
     color: #171717;
     border-radius: .8rem;
-    padding: 2rem;
     margin-bottom: 2rem;
     cursor: pointer;
     max-width: 100%;
+    overflow: hidden;
 
     &__header{
      
@@ -13,12 +13,13 @@
             width: 100%;
             height: 80%;
             object-fit: cover;
-            border-radius: .5rem;
             margin-bottom: 15px;
         }
     }
 
     &__body{
+        padding: 2rem;
+
         .profile{
             display: flex;
             align-items: center;
@@ -53,13 +54,16 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: -30px;
+
 
         .mentions{
             display: inline-flex;
-            gap: 1.5rem;
+            gap: .5rem;
 
             span{
                 display: inline-flex;
+                align-items: center;
                 gap: .3rem;
                 border-radius: .3rem;
                 padding: .7rem;
@@ -75,6 +79,7 @@
             display: flex;
             align-items: center;
             gap: .4rem;
+            margin-right: 5px;
 
             button{
                 background-color: #eee;

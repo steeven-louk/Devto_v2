@@ -127,12 +127,80 @@
                     align-items: center;
 
                     .user{
+                        position: relative;
                         max-width: 3rem;
                         border-radius: 50%;
 
                         img{
                             width: 100%;
-                            border-radius: 100%;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            cursor: pointer;
+                            padding: 4px;
+
+                            &:hover{
+                                background: #ccc;
+                            }
+                        }
+
+                        .user-subMenu{
+                            position: absolute;
+                            background-color: #fff;
+                            border: 3px solid #000;
+                            border-radius: 5px;
+                            width: 240px;
+                            right: 0;
+                            padding: 3px;
+                            box-shadow: 7px 5px 3px #000;
+
+                            ul{
+                                display: flex;
+                                flex-direction: column;
+                                gap: .2px;
+
+                                li{
+                                    width: 100%;
+                                    padding: 10px;
+                                    cursor: pointer;
+                                    text-align: left;
+
+                                    &:nth-child(1){
+                                        padding-bottom: 15px;
+                                        border-bottom: 2px solid #ccc;
+
+
+                                        div{
+                                            display: flex;
+                                            flex-direction: column;
+                                            gap: 5px;
+                                            width: 100%;
+
+                                            .name{
+                                                font-weight: bold;
+                                            }
+                                            .slug{
+                                                color: #ccc;
+                                            }
+                                        }
+                                    }
+
+                                    &:last-child{
+                                        border-top: 2px solid #ccc;
+                                        padding-top: 20px;
+                                    }
+
+                                    &:hover{
+                                        background: #ccc
+                                    }
+
+
+                                }
+
+                                hr{
+                                    color: #000;
+                                    height: 3px;
+                                }
+                            }
                         }
                     }
                 }

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Navbar = () => {
 
     const [open, setOpen] = useState(false);
+    const [userMenu, setUserMenu] = useState(false);
 
   return (
     <nav className='navbar'>
@@ -69,7 +70,25 @@ const Navbar = () => {
                     <li className='icon_container'><FontAwesomeIcon icon="fa fa-bell" /></li>
                     <li>
                         <div className="user">
-                            <img src="./assets/dev_logo.png" alt="profil_img" />
+                            <img src="./assets/dev_logo.png" alt="profil_img" onClick={()=> setUserMenu(!userMenu)}/>
+
+                        {userMenu &&
+                            <div className="user-subMenu">
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <span className="name">CodeBucks</span>
+                                            <span className="slug">@codebucks</span>
+                                        </div>
+                                    </li>
+                                    <li>Tableau de bord</li>
+                                    <li>Ecrire un message</li>
+                                    <li>Liste de lecture</li>
+                                    <li>Parametres</li>
+                                    <li>Déconnexion</li>
+                                </ul>
+                            </div>
+                        }
                         </div>
                     </li>
                 </ul>

@@ -1,19 +1,16 @@
 import './App.scss';
-import Content from './components/content';
-import LeftSide from './components/leftSide';
+import Register from './views/auth/Register';
 import Navbar from './components/navbar';
-import RightSide from './components/rightSide';
+
+import Home from './views/Home';
 
 function App() {
   return (
     <div className="App">
+        {/* <Home/> */}
         <Navbar />
 
-        <main className='main__container'>
-            <LeftSide/>
-            <Content/>
-            <RightSide/>
-        </main>
+        <Register/>
     </div>
   );
 }

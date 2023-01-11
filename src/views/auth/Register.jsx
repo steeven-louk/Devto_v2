@@ -9,21 +9,25 @@ const Register = () => {
             <p>DEV Community 👩‍💻👨‍💻 est une communauté de 987 598 développeurs incroyables</p>
             <br />
 
-            <p>Vous avez un mot de passe ? Continuez avec votre adresse e-mail</p>
+            <p>Vous avez déjà un compte? <a href='../auth/Login.jsx'>Connectez-vous .</a></p>
 
         </div>
            
             <form action="">
+            <div className="form-group">
+                    <label htmlFor="nom">Nom</label>
+                    <input type="text" name='nom' />
+                </div>
                 <div className="form-group">
                     <label htmlFor="email">E-mail</label>
                     <input type="text" name='email' />
                 </div>
                 <div className="form-group">
                     <label htmlFor="mdp">Mot de passe</label>
-                    <input type="text" name='mdp' />
+                    <input type="password" name='mdp' />
                 </div>
                 <div className="form-group">
-                    <input type="checkbox" name="remember" id="" />
+                    <input type="checkbox" name="remember"/>
                     <label htmlFor="remember">Souviens-toi de moi</label>
                 </div>
 
@@ -31,7 +35,7 @@ const Register = () => {
                 <button className="btn-submit">continue</button>
                 
             </form>
-            <a href='#'>j'ai oublié mon mot de passe</a>
+
         </div>
     </div>
   )

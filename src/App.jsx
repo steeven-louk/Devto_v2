@@ -3,6 +3,7 @@ import Register from './views/auth/Register';
 import Navbar from './components/navbar';
 
 import Home from './views/Home';
+import Login from './views/auth/Login';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         {/* <Home/> */}
         <Navbar />
 
-        <Register/>
+        {/* <Register/>*/}
+        <Login/>
     </div>
   );
 }

@@ -1,36 +1,36 @@
 .navbar {
     background: #fff;
 
-    .container{
+    .container {
         display: flex;
         justify-content: space-between;
         padding: .5rem 3rem;
 
-        
-        .left_nav{
+
+        .left_nav {
             position: relative;
             display: flex;
             align-items: center;
             gap: 1.5rem;
 
-            .subMenu_icon .sub_ico{
+            .subMenu_icon .sub_ico {
                 display: none;
                 width: 35px;
                 height: 35px;
             }
 
-            .navbar_brand{
+            .navbar_brand {
                 max-width: 3.5rem;
 
-                img{
+                img {
                     width: 100%;
                 }
             }
 
-            .search_container{
+            .search_container {
                 max-width: 100%;
 
-                .search{
+                .search {
                     width: 170%;
                     padding: .7rem;
                     border-radius: 3px;
@@ -39,7 +39,7 @@
                 }
             }
 
-            .subMenu{
+            .subMenu {
                 position: fixed;
                 margin: 0;
                 top: 0;
@@ -52,7 +52,7 @@
                 transform: translateX(-290px);
                 transition: .4s all ease-in-out;
 
-                .subHeader{
+                .subHeader {
                     display: flex;
                     justify-content: space-between;
                     align-items: baseline;
@@ -63,16 +63,16 @@
                 nav {
                     margin-top: 25px;
 
-                    ul{
+                    ul {
                         display: flex;
                         flex-direction: column;
                         gap: 1.5em;
 
-                        .subMenu_social{
+                        .subMenu_social {
                             display: flex;
                             gap: 25px;
 
-                             .social-icon{
+                            .social-icon {
                                 width: 20px;
                                 height: 20px;
                                 color: rgb(116, 113, 113);
@@ -82,21 +82,21 @@
                 }
             }
 
-            .subMenu.open{
+            .subMenu.open {
                 transform: translateX(0);
             }
         }
 
-        .right_nav{
+        .right_nav {
             float: right;
-           
-            ul{
+
+            ul {
                 display: flex;
                 gap: 1.2rem;
                 align-items: baseline;
 
-                &:nth-child(1){
-                    button{
+                &:nth-child(1) {
+                    button {
                         padding: .7rem;
                         background: rgb(79, 79, 236);
                         color: #fff;
@@ -105,44 +105,44 @@
                         cursor: pointer;
                         transition: background .4s;
 
-                        &:hover{
+                        &:hover {
                             background: blue;
                         }
                     }
                 }
 
-               .icon_container{
-                padding: .7em;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: background .4s;
+                .icon_container {
+                    padding: .7em;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: background .4s;
 
-                &:hover{
-                    background: #ccc;
+                    &:hover {
+                        background: #ccc;
+                    }
                 }
-               }
 
-                &:last-child{
+                &:last-child {
                     align-items: center;
 
-                    .user{
+                    .user {
                         position: relative;
                         max-width: 3rem;
                         border-radius: 50%;
 
-                        img{
+                        img {
                             width: 100%;
                             border-radius: 50%;
                             object-fit: cover;
                             cursor: pointer;
                             padding: 4px;
 
-                            &:hover{
+                            &:hover {
                                 background: #ccc;
                             }
                         }
 
-                        .user-subMenu{
+                        .user-subMenu {
                             position: absolute;
                             background-color: #fff;
                             border: 3px solid #000;
@@ -152,53 +152,93 @@
                             padding: 3px;
                             box-shadow: 7px 5px 3px #000;
 
-                            ul{
+                            ul {
                                 display: flex;
                                 flex-direction: column;
                                 gap: .2px;
 
-                                li{
+                                li {
                                     width: 100%;
                                     padding: 10px;
                                     cursor: pointer;
                                     text-align: left;
 
-                                    &:nth-child(1){
+                                    &:nth-child(1) {
                                         padding-bottom: 15px;
                                         border-bottom: 2px solid #ccc;
 
 
-                                        div{
+                                        div {
                                             display: flex;
                                             flex-direction: column;
                                             gap: 5px;
                                             width: 100%;
 
-                                            .name{
+                                            .name {
                                                 font-weight: bold;
                                             }
-                                            .slug{
+
+                                            .slug {
                                                 color: #ccc;
                                             }
                                         }
                                     }
 
-                                    &:last-child{
+                                    &:last-child {
                                         border-top: 2px solid #ccc;
                                         padding-top: 20px;
                                     }
 
-                                    &:hover{
+                                    &:hover {
                                         background: #ccc
                                     }
 
 
                                 }
 
-                                hr{
+                                hr {
                                     color: #000;
                                     height: 3px;
                                 }
+                            }
+                        }
+                    }
+                }
+
+                .connexion {
+                    display: flex;
+                    gap: 15px;
+
+                    button {
+
+                        &:nth-child(1) {
+                            background: none;
+                            font-weight: bold;
+
+                            a {
+                                color: #000
+                            }
+
+                            &:hover {
+                                background: rgb(130, 130, 218);
+                                text-decoration: underline;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            background: none;
+                            color: rgb(79, 79, 236);
+                            border: 1px solid rgb(79, 79, 236);
+
+                            &:hover {
+                                background: rgb(79, 79, 236);
+                                text-decoration: underline;
+                                font-weight: bold;
+
+                                a {
+                                    color: #fff
+                                }
+
                             }
                         }
                     }

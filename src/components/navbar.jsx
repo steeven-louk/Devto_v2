@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({isLogged}) => {
 
     const [open, setOpen] = useState(false);
     const [userMenu, setUserMenu] = useState(false);
 
+    const name = JSON.parse(localStorage.getItem('name'));
+    
   return (
+   
     <nav className='navbar'>
         <div className="container">
             <div className="left_nav">
@@ -14,7 +18,7 @@ const Navbar = () => {
                     <FontAwesomeIcon icon="fa-solid fa-bars" className='sub_ico' />
                 </div>
                 <div className="navbar_brand">
-                    <img src="./assets/dev_logo.png" alt="logo" />
+                   <Link to="/"> <img src="./assets/dev_logo.png" alt="logo" /> </Link>
                 </div>
                 <div className="search_container">
                     <input type="text" className="search" placeholder='search...' />
@@ -65,9 +69,18 @@ const Navbar = () => {
             </div>
             <div className="right_nav">
                 <ul>
-                    <li><button>Ecrire un message</button></li>
+                {isLogged === false ? (
+                     <div className="connexion">
+                       <button><Link to='/login'> Connexion</Link></button>
+                       <button><Link to='/register'> Créer un compte</Link></button>
+                    </div>
+                ) : (
+                 <>
+                 <li><button>Ecrire un message</button></li>
                     <li className='icon_container'><FontAwesomeIcon icon="fa fa-comment"/></li>
                     <li className='icon_container'><FontAwesomeIcon icon="fa fa-bell" /></li>
+
+                
                     <li>
                         <div className="user">
                             <img src="./assets/dev_logo.png" alt="profil_img" onClick={()=> setUserMenu(!userMenu)}/>
@@ -77,8 +90,8 @@ const Navbar = () => {
                                 <ul>
                                     <li>
                                         <div>
-                                            <span className="name">CodeBucks</span>
-                                            <span className="slug">@codebucks</span>
+                                            <span className="name">{name}</span>
+                                            <span className="slug">@{name}</span>
                                         </div>
                                     </li>
                                     <li>Tableau de bord</li>
@@ -91,10 +104,16 @@ const Navbar = () => {
                         }
                         </div>
                     </li>
+                 </>
+                )
+                   
+                }
+                    
                 </ul>
             </div>
         </div>
     </nav>
+  
   )
 }
 

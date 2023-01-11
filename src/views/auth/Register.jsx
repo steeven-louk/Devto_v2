@@ -1,7 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom';
 import AuthFooter from '../../components/authFooter'
 
-const Register = () => {
+const Register = ({auth}) => {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+      
+    const navigate = useNavigate()
+   
+    const userRegister = (e) =>{
+        e.preventDefault();
+        
+
+        const validate = ()=>{
+            if(name || email || password === '') {
+                console.log('veuillez remplir tout les champs');
+                return false;
+          }
+          return true;
+    }
+
+    if(validate){
+        localStorage.setItem('name',JSON.stringify(name));
+        localStorage.setItem('email', JSON.stringify(email));
+        auth(true);
+
+        
+        navigate('/');
+    }
+}
+
+
   return (
     <>
         <div className='register_container'>
@@ -15,18 +46,18 @@ const Register = () => {
 
         </div>
            
-            <form action="">
+            <form onSubmit={userRegister}>
             <div className="form-group">
                     <label htmlFor="nom">Nom</label>
-                    <input type="text" name='nom' />
+                    <input type="text" value={name} onChange={(e)=> setName(e.target.value)} name='nom' />
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">E-mail</label>
-                    <input type="text" name='email' />
+                    <input type="text" value={email} name='email'  onChange={(e)=> setEmail(e.target.value)} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="mdp">Mot de passe</label>
-                    <input type="password" name='mdp' />
+                    <input type="password" value={password} name='mdp'  onChange={(e)=> setPassword(e.target.value)}/>
                 </div>
                 <div className="form-group">
                     <input type="checkbox" name="remember"/>

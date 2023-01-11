@@ -1,8 +1,10 @@
 import React from 'react'
+import AuthFooter from '../../components/authFooter'
 
 const Login = () => {
   return (
-    <div className='register_container'>
+   <>
+     <div className='register_container'>
     <div className="container">
     <div className="header">
       <h1>Bienvenue dans la communauté DEV 👩‍💻👨‍💻</h1>
@@ -34,6 +36,8 @@ const Login = () => {
         <a href='#'>j'ai oublié mon mot de passe</a>
     </div>
 </div>
+<AuthFooter/>
+   </>
   )
 }
 

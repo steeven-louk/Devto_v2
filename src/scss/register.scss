@@ -6,7 +6,8 @@
     align-items: center;
     
     .container{
-        border: 1px solid #fff;
+        background-color: #fff;
+        border: 1px solid #ddd;
         border-radius: 5px;
         width: 39rem;
         height: 90%;
@@ -98,6 +99,31 @@
         a{
            display: flex;
            justify-content: center;
+        }
+    }
+
+  
+    
+}
+.authFooter-container{
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 4rem;
+    gap: 18px;
+
+    ul{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+
+        li{
+            list-style-type: disc;
         }
     }
 }

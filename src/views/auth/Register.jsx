@@ -1,8 +1,10 @@
 import React from 'react'
+import AuthFooter from '../../components/authFooter'
 
 const Register = () => {
   return (
-    <div className='register_container'>
+    <>
+        <div className='register_container'>
         <div className="container">
         <div className="header">
         <h1>Bienvenue dans la communauté DEV 👩‍💻👨‍💻</h1>
@@ -37,7 +39,13 @@ const Register = () => {
             </form>
 
         </div>
+
+      
     </div>
+    <footer>
+            <AuthFooter/>
+        </footer>
+    </>
   )
 }
 

@@ -1,18 +1,21 @@
 import './App.scss';
-import Register from './views/auth/Register';
 import Navbar from './components/navbar';
 
 import Home from './views/Home';
 import Login from './views/auth/Login';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-        {/* <Home/> */}
+
         <Navbar />
 
-        <Register/>
-        {/* <Login/> */}
+        <Routes>
+          <Route path="/" exact element={<Home/>}/>
+          <Route path="/login" exact element={<Login/>}/>
+        </Routes>
+
     </div>
   );
 }

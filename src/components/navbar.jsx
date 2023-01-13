@@ -1,17 +1,82 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { Box, Button, Modal, Stack } from '@mui/material';
 
-const Navbar = ({isLogged}) => {
+const Navbar = ({isLogged, auth}) => {
 
     const [open, setOpen] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
     const [userMenu, setUserMenu] = useState(false);
 
+    const navigate = useNavigate()
+
     const name = JSON.parse(localStorage.getItem('name'));
+
+
+    const handleOpen = () => {
+        setOpenModal(true);
+      };
+      const handleClose = () => {
+        setOpenModal(false);
+        setUserMenu(false);
+      };
+
+    const logout = () =>{
+        if(name !== null){
+            localStorage.clear();
+            setUserMenu(false);
+            setOpenModal(false)
+
+            setTimeout(() => {
+                 navigate('/');
+                 auth(false);
+
+            },2000)
+           
+        }
+    }
     
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        maxwidth: 400,
+        bgcolor: 'background.paper',
+        border: '4px solid rgb(79, 79, 236)',
+        boxShadow: 24,
+        pt: 2,
+        px: 4,
+        pb: 3,
+      };
+
   return (
-   
-    <nav className='navbar'>
+   <>
+      <Modal
+        open={openModal}
+        onClose={handleClose}
+        aria-labelledby="parent-modal-title"
+        aria-describedby="parent-modal-description"
+      >
+        <Box sx={{...style, width: 400 }}>
+          <h2 id="parent-modal-title">Deconnexion</h2>
+          <p id="parent-modal-description">
+            Êtes-vous sûre de vouloir vous déconnecter de DEV.TO ?
+          </p>
+
+          <Box>
+            <Stack sx={{ my: 2 }}>
+                <Button variant="outlined" sx={{ mb: 1 }} onClick={logout}>oui</Button>
+                
+                <Button variant="contained" color="error" onClick={handleClose}>non</Button>
+            </Stack>
+          </Box>
+          
+        </Box>
+      </Modal>
+
+       <nav className='navbar'>
         <div className="container">
             <div className="left_nav">
                 <div className="subMenu_icon" onClick={()=> setOpen(true)} >
@@ -41,17 +106,17 @@ const Navbar = ({isLogged}) => {
           <li><FontAwesomeIcon icon="fa-solid fa-video" /> vidéos</li>
           <li><FontAwesomeIcon icon="fa-solid fa-tags" /> mots clés</li>
           <li><FontAwesomeIcon icon="fa-solid fa-lightbulb" /> FAQ</li>
-          <li><FontAwesomeIcon icon="fa-solid fa-bags-shopping" /> Boutique Forem</li>
+          <li> Boutique Forem</li>
           <li><FontAwesomeIcon icon="fa-solid fa-heart" /> Commanditaires</li>
-          <li><FontAwesomeIcon icon="fa-solid fa-trumpet" /> A propos de</li>
+          <li>A propos de</li>
           <li><FontAwesomeIcon icon="fa-solid fa-book-open" /> Contacter</li>
           <li><FontAwesomeIcon icon="fa-solid fa-book-open" /> Guides</li>
-          <li><FontAwesomeIcon icon="fa-solid fa-face" /> Comparaisons de logiciel</li>
+          <li> Comparaisons de logiciel</li>
           
           <span>Autre</span>
 
           <li><FontAwesomeIcon icon="fa-solid fa-thumbs-up" /> Code de conduite</li>
-          <li><FontAwesomeIcon icon="fa-solid fa-eyes" /> Politique de confidentialité</li>
+          <li>Politique de confidentialité</li>
           <li><FontAwesomeIcon icon="fa-solid fa-tags" /> Conditions d'utilisation</li>
 
 
@@ -98,7 +163,7 @@ const Navbar = ({isLogged}) => {
                                     <li>Ecrire un message</li>
                                     <li>Liste de lecture</li>
                                     <li>Parametres</li>
-                                    <li>Déconnexion</li>
+                                    <li onClick={handleOpen}>Déconnexion</li>
                                 </ul>
                             </div>
                         }
@@ -113,7 +178,7 @@ const Navbar = ({isLogged}) => {
             </div>
         </div>
     </nav>
-  
+  </>
   )
 }
 

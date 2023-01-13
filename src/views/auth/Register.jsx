@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import AuthFooter from '../../components/authFooter'
 
 const Register = ({auth}) => {
@@ -7,8 +7,10 @@ const Register = ({auth}) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    let error ="";
       
     const navigate = useNavigate()
+  
    
     const userRegister = (e) =>{
         e.preventDefault();
@@ -17,6 +19,7 @@ const Register = ({auth}) => {
         const validate = ()=>{
             if(name || email || password === '') {
                 console.log('veuillez remplir tout les champs');
+                error= 'veuillez remplir tout les champs'
                 return false;
           }
           return true;
@@ -37,6 +40,7 @@ const Register = ({auth}) => {
     <>
         <div className='register_container'>
         <div className="container">
+        <span>{error && error}</span>
         <div className="header">
         <h1>Bienvenue dans la communauté DEV 👩‍💻👨‍💻</h1>
             <p>DEV Community 👩‍💻👨‍💻 est une communauté de 987 598 développeurs incroyables</p>

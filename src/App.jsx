@@ -12,12 +12,15 @@ function App() {
   const [isAuthentificated, setIsAuthentificated] = useState(false);
 
   const isLoggedIn =()=>{
-  let  getUser = JSON.parse(localStorage.getItem('user'));
-  if(getUser === undefined){
-    setIsAuthentificated(false);
-  }else{
-    setIsAuthentificated(true);
-  }
+
+  const getUser = JSON.parse(localStorage.getItem('name'));
+
+  if(getUser !== null){
+      setIsAuthentificated(true);
+    }
+    else{
+      setIsAuthentificated(false);
+    }
   }
 
 useEffect(() => {
@@ -27,15 +30,15 @@ useEffect(() => {
   return (
     <div className="App">
 
-        <Navbar isLogged={isAuthentificated}/>
+        <Navbar isLogged={isAuthentificated} auth={setIsAuthentificated} />
 
         <Routes>
-          <Route path="/" exact element={<Home isLogged={isAuthentificated}/>}/>
-          <Route path="*" exact element={<Home />}/>
-        {isAuthentificated && <>
+          <Route path="*" exact element={<Home isLogged={isAuthentificated}/>}/>
+
+        {isAuthentificated === false ?<>
             <Route path="/register" exact element={<Register auth={setIsAuthentificated}/>}/> 
             <Route path="/login" exact element={<Login/>}/> 
-        </>        
+        </>     : ''   
       }
         </Routes>
 

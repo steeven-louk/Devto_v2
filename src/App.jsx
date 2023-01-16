@@ -6,6 +6,7 @@ import Login from './views/auth/Login';
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Register from './views/auth/Register';
+import ListeDeLecture from './views/listeDeLecture';
 
 function App() {
 
@@ -34,6 +35,7 @@ useEffect(() => {
 
         <Routes>
           <Route path="*" exact element={<Home isLogged={isAuthentificated}/>}/>
+          <Route path="/bookmark" exact element={<ListeDeLecture/>} />
 
         {isAuthentificated === false ?<>
             <Route path="/register" exact element={<Register auth={setIsAuthentificated}/>}/> 

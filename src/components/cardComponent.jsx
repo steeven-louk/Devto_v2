@@ -8,6 +8,15 @@ const CardComponent = (props) => {
 
   const tagList = articles.tag_list;
 
+
+  const addToBookmark = (id) =>{
+    const article = JSON.parse(localStorage.getItem("article_id"));
+
+    if(article !== id || null){
+      localStorage.setItem("article_id",JSON.stringify(id) );
+    }
+  }
+
   return (
     <>
     {!loading ? (
@@ -55,7 +64,7 @@ const CardComponent = (props) => {
               <span className="time">
                 {articles.reading_time_minutes} min read
               </span>
-              <button><FontAwesomeIcon icon="fa-regular fa-bookmark" /></button>
+              <button><FontAwesomeIcon icon="fa-regular fa-bookmark" onClick={addToBookmark(articles.id)}/></button>
             </div>
           </div>
         </div>

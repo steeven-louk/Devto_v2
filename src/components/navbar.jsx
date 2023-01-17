@@ -163,6 +163,7 @@ const Navbar = ({isLogged, auth}) => {
                                     <li>Ecrire un message</li>
                                     <li>Liste de lecture</li>
                                     <li>Parametres</li>
+                                    <li><FontAwesomeIcon icon="fa-regular fa-moon" /></li>
                                     <li onClick={handleOpen}>Déconnexion</li>
                                 </ul>
                             </div>

@@ -1,5 +1,5 @@
 .navbar {
-    background: #fff;
+    background: var(--main-color);
 
     .container {
         display: flex;
@@ -46,11 +46,12 @@
                 left: 0;
                 width: 250px;
                 height: 100vh;
-                background: #fff;
+                background: var(--main-color);
                 padding: 15px;
                 overflow-y: scroll;
                 transform: translateX(-290px);
                 transition: .4s all ease-in-out;
+                color: var(--main-text-color);
 
                 .subHeader {
                     display: flex;
@@ -144,8 +145,10 @@
 
                         .user-subMenu {
                             position: absolute;
-                            background-color: #fff;
+                            background-color: var(--main-color);
                             border: 3px solid #000;
+                            color: var(--main-text-color);
+
                             border-radius: 5px;
                             width: 240px;
                             right: 0;

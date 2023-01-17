@@ -11,6 +11,8 @@ import ListeDeLecture from './views/listeDeLecture';
 function App() {
 
   const [isAuthentificated, setIsAuthentificated] = useState(false);
+  const [theme, setTheme] = useState('dark');
+
 
   const isLoggedIn =()=>{
 
@@ -29,7 +31,7 @@ useEffect(() => {
 }, [isAuthentificated]);
 
   return (
-    <div className="App">
+    <div className={theme === 'dark'? "App themeDark" : ''}>
 
         <Navbar isLogged={isAuthentificated} auth={setIsAuthentificated} />
 

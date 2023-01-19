@@ -191,10 +191,10 @@ const Navbar = ({ isLogged, auth, theme, setTheme }) => {
                     <button>Ecrire un message</button>
                   </li>
                   <li className="icon_container">
-                    <FontAwesomeIcon icon="fa fa-comment" />
+                    <FontAwesomeIcon icon="fa fa-comment" className="iconNavbar" />
                   </li>
                   <li className="icon_container">
-                    <FontAwesomeIcon icon="fa fa-bell" />
+                    <FontAwesomeIcon icon="fa fa-bell" className="iconNavbar" />
                   </li>
 
                   <li>

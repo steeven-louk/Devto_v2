@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
+
 const LeftSide = () => {
   return (
     <div className="leftside_container">

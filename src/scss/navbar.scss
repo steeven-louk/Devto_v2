@@ -119,6 +119,10 @@
                     cursor: pointer;
                     transition: background .4s;
 
+                    .iconNavbar{
+                        color: var(--main-text-color);
+                    }
+
                     &:hover {
                         background: #ccc;
                     }
@@ -154,7 +158,7 @@
                             width: 240px;
                             right: 0;
                             padding: 3px;
-                            box-shadow: 7px 5px 3px #000;
+                            box-shadow: 7px 5px 3px var(--secondary-text-color);
 
                             ul {
                                 display: flex;

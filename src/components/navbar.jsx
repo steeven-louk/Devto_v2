@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { Link, useNavigate } from "react-router-dom";
+
 import { Box, Button, Modal, Stack } from "@mui/material";
 
 const Navbar = ({ isLogged, auth, theme, setTheme }) => {
@@ -191,7 +194,10 @@ const Navbar = ({ isLogged, auth, theme, setTheme }) => {
                     <button>Ecrire un message</button>
                   </li>
                   <li className="icon_container">
-                    <FontAwesomeIcon icon="fa fa-comment" className="iconNavbar" />
+                    <FontAwesomeIcon
+                      icon="fa fa-comment"
+                      className="iconNavbar"
+                    />
                   </li>
                   <li className="icon_container">
                     <FontAwesomeIcon icon="fa fa-bell" className="iconNavbar" />

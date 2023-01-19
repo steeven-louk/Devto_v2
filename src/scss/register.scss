@@ -1,12 +1,12 @@
-.register_container{
+.register_container {
 
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 5rem;
-    
-    .container{
+
+    .container {
         background-color: #fff;
         border: 1px solid #ddd;
         border-radius: 5px;
@@ -15,69 +15,69 @@
         padding: 50px;
         margin: 20px 0;
 
-        .header{
+        .header {
             text-align: center;
 
-            p:nth-last-child(1){
+            p:nth-last-child(1) {
                 display: inline-flex;
                 gap: 5px
             }
         }
 
-        form{
+        form {
             margin-top: 25px;
 
-            .form-group{
+            .form-group {
                 display: flex;
                 flex-direction: column;
                 gap: 3px;
                 margin-top: 20px;
 
-                input{
+                input {
                     padding: 13px;
                     border-radius: 3px;
                     border: 1px solid #ccc;
 
-                    &:focus{
-                        outline: 2px solid blue;
+                    &:focus {
+                        outline: 2px solid rgb(44, 44, 184);
                     }
                 }
 
-                &:nth-last-child(2){
+                &:nth-last-child(2) {
                     flex-direction: row;
                     gap: 5px;
                     align-items: center;
 
 
-                    input[type=checkbox]{
+                    input[type=checkbox] {
                         appearance: none;
                         width: 25px;
                         cursor: pointer;
                         border: .8px solid #ccc;
                         border-radius: 10px;
 
-                        &:checked{
-                            background: blue;
+                        &:checked {
+                            background: rgb(44, 44, 184);
                             position: relative;
 
                             &::before {
-                              font-family: FontAwesome;
-                              content: '\f00c';
-                              display: block;
-                              color: #fff;
-                              font-size: 20px;
-                              left: 4px;
-                              right: 0;
-                              top: 4px;
-                              bottom: 0;
-                              position: absolute;
+                                font-family: FontAwesome;
+                                content: '\f00c';
+                                display: block;
+                                color: #fff;
+                                font-size: 20px;
+                                left: 4px;
+                                right: 0;
+                                top: 4px;
+                                bottom: 0;
+                                position: absolute;
                             }
                         }
                     }
                 }
             }
 
-            .btn-submit{
+            .btn-submit {
                 padding: 10px;
                 // display: inline;
                 width: 100%;
@@ -85,28 +85,29 @@
                 border-radius: 5px;
                 color: #fff;
                 margin: 27px 0;
-                background: blue;
+                background: rgb(44, 44, 184);
                 text-transform: capitalize;
                 font-size: 16px;
                 cursor: pointer;
                 transition: background .4s;
 
-                &:hover{
+                &:hover {
                     background: rgb(67, 67, 194);
                 }
             }
         }
 
-        a{
-           display: flex;
-           justify-content: center;
+        a {
+            display: flex;
+            justify-content: center;
         }
     }
 
-  
-    
+
+
 }
-.authFooter-container{
+
+.authFooter-container {
     background-color: #fff;
     width: 100%;
     display: flex;
@@ -116,14 +117,14 @@
     padding: 3rem 4rem;
     gap: 18px;
 
-    ul{
+    ul {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
         gap: 30px;
 
-        li{
+        li {
             list-style-type: disc;
         }
     }

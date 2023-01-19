@@ -1,9 +1,9 @@
-.leftside_container{
+.leftside_container {
     height: 100vh;
     display: flex;
     flex-direction: column;
 
-    li{
+    li {
         display: inline-flex;
         gap: 1rem;
         font-size: 110%;
@@ -13,69 +13,69 @@
         width: 80%;
         cursor: pointer;
 
-        &:hover{
-         background: gray;
-         color: var(--color-hover);
+        &:hover {
+            background: gray;
+            color: var(--color-hover);
         }
 
-        &:last-child{
-         padding-left: 1.9rem;
-        }
-     }
-
-    .nav_list > ul{
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-
-        li:last-child{
+        &:last-child {
             padding-left: 1.9rem;
         }
     }
 
-    .title{
+    .nav_list>ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        li:last-child {
+            padding-left: 1.9rem;
+        }
+    }
+
+    .title {
         display: flex;
         align-items: center;
         font-weight: bold;
         font-size: 120%;
 
-        .icon_title{
+        .icon_title {
             margin-left: auto;
             padding: .5rem;
             border-radius: 20%;
             transition: background .4s;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 background: rgb(156, 154, 154);
             }
         }
     }
 
-    .tagList_container > ul{
+    .tagList_container>ul {
         overflow-y: auto;
         display: flex;
         flex-direction: column;
         gap: .3rem;
         height: 50%;
 
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
             width: 1rem;
         }
 
         &::-webkit-scrollbar-thumb {
             background-color: #666;
-            }
+        }
 
         &::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-            }
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
 
-        li{
+        li {
             font-size: 110%;
             font-weight: 300;
 
-            &:last-child{
+            &:last-child {
                 padding-left: 0;
             }
 

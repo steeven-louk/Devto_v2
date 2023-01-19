@@ -1,18 +1,31 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const LeftSide = () => {
   return (
     <div className="leftside_container">
       <nav className="nav_list">
-        <ul className='navbar_nav'>
-          <li><FontAwesomeIcon icon="fa-solid fa-house" /> Domicile</li>
-          <li><FontAwesomeIcon icon="fa-solid fa-book-open-reader" /> Liste de lecture</li>
-          <li><FontAwesomeIcon icon="fa-solid fa-list-check" /> liste</li>
-          <li><FontAwesomeIcon icon="fa-solid fa-microphone" /> podcasts</li>
-          <li><FontAwesomeIcon icon="fa-solid fa-video" /> vidéos</li>
-          <li><FontAwesomeIcon icon="fa-solid fa-tags" /> mots clés</li>
+        <ul className="navbar_nav">
+          <li>
+            <FontAwesomeIcon icon="fa-solid fa-house" /> Domicile
+          </li>
+          <li>
+            <FontAwesomeIcon icon="fa-solid fa-book-open-reader" /> Liste de
+            lecture
+          </li>
+          <li>
+            <FontAwesomeIcon icon="fa-solid fa-list-check" /> liste
+          </li>
+          <li>
+            <FontAwesomeIcon icon="fa-solid fa-microphone" /> podcasts
+          </li>
+          <li>
+            <FontAwesomeIcon icon="fa-solid fa-video" /> vidéos
+          </li>
+          <li>
+            <FontAwesomeIcon icon="fa-solid fa-tags" /> mots clés
+          </li>
           <li>suite...</li>
         </ul>
         <br />
@@ -20,7 +33,9 @@ const LeftSide = () => {
 
       <div className="title">
         <span>Mes tags</span>
-        <span className="icon_title"><FontAwesomeIcon icon="fa-regular fa-square" /></span>
+        <span className="icon_title">
+          <FontAwesomeIcon icon="fa-regular fa-square" />
+        </span>
       </div>
 
       <div className="tagList_container">
@@ -45,7 +60,7 @@ const LeftSide = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LeftSide
+export default LeftSide;

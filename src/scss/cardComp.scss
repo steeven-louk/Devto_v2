@@ -1,4 +1,4 @@
-.card{
+.card {
     background: var(--main-color);
     color: var(--secondary-text-color);
     border-radius: .8rem;
@@ -7,9 +7,9 @@
     max-width: 100%;
     overflow: hidden;
 
-    &__header{
-     
-        img{
+    &__header {
+
+        img {
             width: 100%;
             height: 80%;
             object-fit: cover;
@@ -17,16 +17,16 @@
         }
     }
 
-    &__body{
+    &__body {
         padding: 2rem;
 
-        .profile{
+        .profile {
             display: flex;
             align-items: center;
             gap: .5rem;
             margin-bottom: 1rem;
 
-            img{
+            img {
                 width: 2rem;
                 height: 2rem;
                 border-radius: 50%;
@@ -34,34 +34,36 @@
                 cursor: pointer;
             }
 
-            .profile_details{
+            .profile_details {
                 display: flex;
                 flex-direction: column;
             }
         }
-        .tags{
+
+        .tags {
             display: flex;
             align-items: center;
             gap: .6rem;
             margin: .8rem 0;
         }
 
-        &__title:hover{
+        &__title:hover {
             color: var(--color-hover);
         }
     }
-    &__footer{
+
+    &__footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-top: -30px;
 
 
-        .mentions{
+        .mentions {
             display: inline-flex;
             gap: .5rem;
 
-            span{
+            span {
                 display: inline-flex;
                 align-items: center;
                 gap: .3rem;
@@ -69,27 +71,27 @@
                 padding: .7rem;
                 cursor: pointer;
 
-                &:hover{
+                &:hover {
                     background-color: rgba(73, 71, 71, 0.6);
                 }
             }
         }
 
-        .right{
+        .right {
             display: flex;
             align-items: center;
             gap: .4rem;
             margin-right: 5px;
 
-            button{
+            button {
                 background-color: #eee;
-                color: rgba(0,0,0,.5);
+                color: rgba(0, 0, 0, .5);
                 border: none;
-                border-radius:.3rem;
+                border-radius: .3rem;
                 padding: .5rem;
                 cursor: pointer;
 
-                &:hover{
+                &:hover {
                     background-color: rgba(73, 71, 71, 0.6);
                 }
             }

@@ -1,74 +1,74 @@
-.rightside_container{
+.rightside_container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    
-    section{
+
+    section {
         padding: .8rem;
         background-color: var(--main-color);
         color: var(--main-text-color);
         border-radius: .4rem;
         height: auto;
 
-        h1{
+        h1 {
             margin: .5rem .6rem;
         }
 
-        img{
+        img {
             width: 100%;
             height: 40%;
             border-radius: .5rem;
         }
     }
 
-    .listings{
-        .title_section{
+    .listings {
+        .title_section {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        article{
+        article {
             padding: .8rem 0px;
             border-bottom: 1px solid #ccc;
 
-            &:hover{
+            &:hover {
                 background: #ccc;
-            } 
+            }
 
-            a{
+            a {
                 display: flex;
                 flex-direction: column;
                 color: var(--main-text-color);
                 gap: .6rem;
 
-                span{
-                    color: rgba(var(--main-text-color),.3)
+                span {
+                    color: rgba(var(--main-text-color), .3)
                 }
             }
         }
     }
 
-    
-    article{
+
+    article {
         padding: .8rem 0px;
         border-bottom: 1px solid #ccc;
 
-        &:hover{
+        &:hover {
             background: #ccc;
         }
 
-        a{
+        a {
             display: flex;
             flex-direction: column;
             color: var(--main-text-color);
             gap: .6rem;
 
-            span{
-                color: rgba(var(--main-text-color),.6)
+            span {
+                color: rgba(var(--main-text-color), .6)
             }
 
-            em{
+            em {
                 padding: .3rem;
                 border-radius: .3rem;
                 background-color: rgb(80, 80, 199);

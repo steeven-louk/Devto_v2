@@ -1,31 +1,33 @@
-*, *::after, *::before{
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     // overflow-x: hidden;
 }
 
-body{
+body {
     background: #ccc;
     max-width: 100vw;
     max-height: 100vh;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style: none;
 }
 
-.sun{
+.sun {
     color: gold;
     border-radius: 50%;
     border: 2px solid #ccc;
 }
 
-.main__container{
+.main__container {
     width: 100%;
     display: flex;
     display: grid;
@@ -37,14 +39,14 @@ li{
 
 @media screen and (max-width: 1038px) {
 
-    .rightside_container{
-        display: none!important;
+    .rightside_container {
+        display: none !important;
     }
 
-    .main__container{
+    .main__container {
 
         grid-template-columns: 1fr 2fr;
-    padding: 1rem 1rem;
+        padding: 1rem 1rem;
 
     }
 
@@ -52,19 +54,20 @@ li{
 
 @media screen and (max-width: 769px) {
 
-    .navbar .left_nav .search_container, .navbar .right_nav button{
+    .navbar .left_nav .search_container,
+    .navbar .right_nav button {
         display: none;
     }
-    
-    .subMenu_icon .sub_ico{
-        display: block!important;
+
+    .subMenu_icon .sub_ico {
+        display: block !important;
     }
 
-    .leftside_container{
-        display: none!important;
+    .leftside_container {
+        display: none !important;
     }
 
-    .main__container{
+    .main__container {
 
         display: flex;
         width: 100%;
@@ -74,44 +77,46 @@ li{
 }
 
 @media screen and (max-width: 425px) {
- 
-   .main__container, .content{
-    padding: 0;
-}
 
-.content_container{
-    padding: 0px .5em!important;
-}    
-
-.navbar{
-    box-sizing: initial;
-    margin-bottom: 25px;
-    .container{
-        padding: .5rem 1rem!important;
+    .main__container,
+    .content {
+        padding: 0;
     }
-}
 
-    .card{
-        padding: 10px!important;
+    .content_container {
+        padding: 0px .5em !important;
+    }
 
-        h1{
+    .navbar {
+        box-sizing: initial;
+        margin-bottom: 25px;
+
+        .container {
+            padding: .5rem 1rem !important;
+        }
+    }
+
+    .card {
+        padding: 10px !important;
+
+        h1 {
             font-size: 98%;
         }
     }
 
-    .card__footer .mentions{
-        gap: 0.3rem!important;
-           
-            span{
+    .card__footer .mentions {
+        gap: 0.3rem !important;
+
+        span {
 
             display: flex;
-            gap: 0rem!important;
-            }
-            
+            gap: 0rem !important;
+        }
 
-         }
-   
-  .span-tag{
-        display: none!important;
+
+    }
+
+    .span-tag {
+        display: none !important;
     }
 }

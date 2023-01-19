@@ -34,16 +34,16 @@
 
             &:hover{
                 background: #ccc;
-            }
+            } 
 
             a{
                 display: flex;
                 flex-direction: column;
-                color: #080f08;
+                color: var(--main-text-color);
                 gap: .6rem;
 
                 span{
-                    color: rgba(0,0,0,0.7)
+                    color: rgba(var(--main-text-color),.3)
                 }
             }
         }
@@ -61,11 +61,11 @@
         a{
             display: flex;
             flex-direction: column;
-            color: #080f08;
+            color: var(--main-text-color);
             gap: .6rem;
 
             span{
-                color: rgba(0,0,0,0.7)
+                color: rgba(var(--main-text-color),.6)
             }
 
             em{

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link, useNavigate } from 'react-router-dom';
 import { Box, Button, Modal, Stack } from '@mui/material';
 
-const Navbar = ({isLogged, auth}) => {
+const Navbar = ({isLogged, auth, theme, setTheme}) => {
 
     const [open, setOpen] = useState(false);
     const [openModal, setOpenModal] = useState(false);
@@ -21,6 +21,15 @@ const Navbar = ({isLogged, auth}) => {
         setOpenModal(false);
         setUserMenu(false);
       };
+
+      const handleChangeTheme = () =>{
+        if(theme === 'Dark'){
+            setTheme('Light');
+        }
+       else{
+        setTheme('Dark');
+       }
+      }
 
     const logout = () =>{
         if(name !== null){
@@ -51,6 +60,8 @@ const Navbar = ({isLogged, auth}) => {
         pb: 3,
       };
 
+
+     
   return (
    <>
       <Modal
@@ -163,7 +174,10 @@ const Navbar = ({isLogged, auth}) => {
                                     <li>Ecrire un message</li>
                                     <li>Liste de lecture</li>
                                     <li>Parametres</li>
-                                    <li><FontAwesomeIcon icon="fa-regular fa-moon" /></li>
+                                    <li onClick={handleChangeTheme}  className='theme_icon'>
+                                        {theme} 
+                                        <span>{theme === 'Dark' ?<FontAwesomeIcon icon="fa-regular fa-moon" /> : <FontAwesomeIcon className='sun' icon="fa-solid fa-sun" />}</span>
+                                    </li>
                                     <li onClick={handleOpen}>Déconnexion</li>
                                 </ul>
                             </div>

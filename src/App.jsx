@@ -11,7 +11,7 @@ import ListeDeLecture from './views/listeDeLecture';
 function App() {
 
   const [isAuthentificated, setIsAuthentificated] = useState(false);
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('Dark');
 
 
   const isLoggedIn =()=>{
@@ -31,9 +31,9 @@ useEffect(() => {
 }, [isAuthentificated]);
 
   return (
-    <div className={theme === 'dark'? "App themeDark" : ''}>
+    <div className={theme === 'Dark'? "App themeDark" : ''}>
 
-        <Navbar isLogged={isAuthentificated} auth={setIsAuthentificated} />
+        <Navbar isLogged={isAuthentificated} theme={theme} setTheme={setTheme} auth={setIsAuthentificated} />
 
         <Routes>
           <Route path="*" exact element={<Home isLogged={isAuthentificated}/>}/>

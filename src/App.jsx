@@ -10,10 +10,11 @@ import ListeDeLecture from './views/listeDeLecture';
 
 function App() {
 
+  // const storageTheme = JSON.parse(localStorage.getItem('theme'));
   const [isAuthentificated, setIsAuthentificated] = useState(false);
-  const [theme, setTheme] = useState('Dark');
+  const [theme, setTheme] = useState(false);
 
-
+console.log(theme);
   const isLoggedIn =()=>{
 
   const getUser = JSON.parse(localStorage.getItem('name'));
@@ -26,12 +27,18 @@ function App() {
     }
   }
 
+  // useEffect(()=>{
+  //   theme ==='Light' ? localStorage.setItem('theme',JSON.stringify('Dark')) : localStorage.setItem('theme',JSON.stringify('Dark'));
+
+  // },[theme])
+
 useEffect(() => {
   isLoggedIn();
+  
 }, [isAuthentificated]);
 
   return (
-    <div className={theme === 'Dark'? "App themeDark" : ''}>
+    <div className={theme? "App themeDark" : 'App'}>
 
         <Navbar isLogged={isAuthentificated} theme={theme} setTheme={setTheme} auth={setIsAuthentificated} />
 
